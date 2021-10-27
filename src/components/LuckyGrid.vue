@@ -1,6 +1,7 @@
 <template>
   <div class="lucky-box">
-    <LuckyGrid
+    test test
+    <!-- <LuckyGrid
       ref="LuckDraw"
       width="310px"
       height="330px"
@@ -11,7 +12,7 @@
       :active-style="activeStyle"
       @start="startCallBack"
       @end="endCallBack"
-    />
+    /> -->
   </div>
 </template>
 

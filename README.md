@@ -1,7 +1,7 @@
 # what-to-eat-today
 
 今！天！吃！啥！？
-
+[预览地址](https://zoudingyi.github.io/what-to-eat-today/)
 ## Project setup
 
 ```

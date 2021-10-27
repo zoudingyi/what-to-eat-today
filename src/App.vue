@@ -25,15 +25,15 @@
 import Nav from '@/components/Nav.vue';
 import LuckyWheel from '@/components/LuckyWheel.vue';
 import LeForm from './components/LeForm.vue';
-// import LuckyGrid from '@/components/LuckyGrid.vue';
+import LuckyGrid from '@/components/LuckyGrid.vue';
 
 export default {
   name: 'App',
   components: {
     Nav,
     LuckyWheel,
+    LuckyGrid,
     LeForm
-    // LuckyGrid
   },
   data() {
     return {

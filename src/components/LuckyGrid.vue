@@ -1,16 +1,18 @@
 <template>
-  <LuckyGrid
-    ref="LuckDraw"
-    width="310px"
-    height="330px"
-    :prizes="prizes"
-    :blocks="blocks"
-    :buttons="buttons"
-    :default-style="defaultStyle"
-    :active-style="activeStyle"
-    @start="startCallBack"
-    @end="endCallBack"
-  />
+  <div class="lucky-box">
+    <LuckyGrid
+      ref="LuckDraw"
+      width="310px"
+      height="330px"
+      :prizes="prizes"
+      :blocks="blocks"
+      :buttons="buttons"
+      :default-style="defaultStyle"
+      :active-style="activeStyle"
+      @start="startCallBack"
+      @end="endCallBack"
+    />
+  </div>
 </template>
 
 <script>
@@ -29,7 +31,7 @@ export default {
           x: 1,
           y: 1,
           background: 'rgba(0, 0, 0, 0)',
-          imgs: [{ src: require('./img/yx/btn.png'), width: '90%', top: '5%' }]
+          imgs: [{ src: '', width: '90%', top: '5%' }]
         }
       ],
       defaultStyle: {
@@ -80,8 +82,10 @@ export default {
             {
               width: '100%',
               height: '100%',
-              src: require(`./img/yx/default-${index}.png`),
-              activeSrc: require(`./img/yx/active-${index}.png`)
+              // src: require(`./img/yx/default-${index}.png`),
+              // activeSrc: require(`./img/yx/active-${index}.png`)
+              src: '',
+              activeSrc: ''
             }
           ]
         });
@@ -100,3 +104,13 @@ export default {
   }
 };
 </script>
+<style lang="scss" scoped>
+.lucky-box {
+  position: relative;
+  height: 100%;
+  // display: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+</style>

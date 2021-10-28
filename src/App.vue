@@ -24,7 +24,7 @@
 <script>
 import Nav from '@/components/Nav.vue';
 import LuckyWheel from '@/components/LuckyWheel.vue';
-import LeForm from './components/LeForm.vue';
+import LeForm from '@/components/LeForm.vue';
 import LuckyGrid from '@/components/LuckyGrid.vue';
 
 export default {
@@ -69,13 +69,43 @@ export default {
     },
     treating(arr) {
       const prizes = [];
-      arr.forEach((item, index) => {
-        prizes.push({
-          title: item,
-          background: index % 2 ? '#f9e3bb' : '#f8d384',
-          fonts: [{ text: item, top: '25%' }]
+      if (this.currentComponent === 'LuckyWheel') {
+        arr.forEach((item, index) => {
+          prizes.push({
+            title: item,
+            background: index % 2 ? '#f9e3bb' : '#f8d384',
+            fonts: [{ text: item, top: '25%' }]
+          });
         });
-      });
+      } else {
+        let axis = [
+          [0, 0],
+          [1, 0],
+          [2, 0],
+          [2, 1],
+          [2, 2],
+          [1, 2],
+          [0, 2],
+          [0, 1]
+        ];
+        axis.forEach((item, index) => {
+          prizes.push({
+            x: item[0],
+            y: item[1],
+            title: arr[index],
+            imgs: [
+              {
+                width: '100%',
+                height: '100%',
+                // src: require(`./img/yx/default-${index}.png`),
+                // activeSrc: require(`./img/yx/active-${index}.png`)
+                src: '',
+                activeSrc: ''
+              }
+            ]
+          });
+        });
+      }
       return prizes;
     }
   }

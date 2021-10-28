@@ -1,7 +1,6 @@
 <template>
   <div class="lucky-box">
-    test test
-    <!-- <LuckyGrid
+    <LuckyGrid
       ref="LuckDraw"
       width="310px"
       height="330px"
@@ -12,15 +11,20 @@
       :active-style="activeStyle"
       @start="startCallBack"
       @end="endCallBack"
-    /> -->
+    />
   </div>
 </template>
 
 <script>
+import { LuckyGrid } from 'vue-luck-draw';
+
 export default {
+  components: { LuckyGrid },
+  props: {
+    prizes: Array
+  },
   data() {
     return {
-      prizes: [],
       blocks: [
         { padding: '1px', background: '#e2cea3', borderRadius: '13px' },
         { padding: '5px 0px', background: '#f3ecdc', borderRadius: '13px' },
@@ -31,8 +35,7 @@ export default {
         {
           x: 1,
           y: 1,
-          background: 'rgba(0, 0, 0, 0)',
-          imgs: [{ src: '', width: '90%', top: '5%' }]
+          fonts: [{ text: '开始', top: '40%', fontSize: '16px' }]
         }
       ],
       defaultStyle: {
@@ -49,7 +52,7 @@ export default {
     };
   },
   mounted() {
-    this.getPrizesList();
+    // this.getPrizesList();
   },
   methods: {
     getPrizesList() {
@@ -100,7 +103,11 @@ export default {
       }, 2000);
     },
     endCallBack(prize) {
-      alert(`恭喜你获得大奖: ${prize.title}`);
+      this.$notify({
+        title: '决定了！',
+        message: `今天就吃${prize.title}！`,
+        position: 'top-left'
+      });
     }
   }
 };

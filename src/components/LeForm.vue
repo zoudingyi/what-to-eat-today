@@ -2,7 +2,7 @@
   <div class="le-form">
     <el-card class="box-card">
       <div slot="header" class="clearfix">
-        <span>编辑菜单列表</span>
+        <span>菜单列表</span>
       </div>
       <div>
         <div class="menu-container">

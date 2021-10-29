@@ -26,7 +26,7 @@ import Nav from '@/components/Nav.vue';
 import LuckyWheel from '@/components/LuckyWheel.vue';
 import LeForm from '@/components/LeForm.vue';
 import LuckyGrid from '@/components/LuckyGrid.vue';
-// test two 3!
+
 export default {
   name: 'App',
   components: {

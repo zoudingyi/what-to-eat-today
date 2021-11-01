@@ -20,11 +20,11 @@ export default {
     };
   },
   created() {
-    // if (this.isPC) {
-    //   this.currentComponent = 'homePC';
-    // } else {
-    //   this.currentComponent = 'homeMobile';
-    // }
+    if (this.isPC) {
+      this.currentComponent = 'homePC';
+    } else {
+      this.currentComponent = 'homeMobile';
+    }
   },
   methods: {
     isPC() {

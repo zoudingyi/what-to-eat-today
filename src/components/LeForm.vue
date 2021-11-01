@@ -86,7 +86,7 @@ export default {
     height: 100%;
   }
   ::v-deep .el-card__body {
-    height: 100%;
+    height: calc(100% - 55px);
     padding: 10px;
     overflow-y: auto;
   }
@@ -95,7 +95,6 @@ export default {
     align-content: flex-start;
     justify-content: flex-start;
     flex-wrap: wrap;
-    // height: 200px;
   }
   .el-tag {
     margin: 5px;

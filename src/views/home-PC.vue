@@ -38,7 +38,7 @@ export default {
     return {
       currentComponent: 'LuckyWheel',
       activeIndex: '1',
-      menu: ['黄焖鸡', '干锅', '冒菜', '炒菜', '北京烤鸭', '砂锅'],
+      menu: ['黄焖鸡', '干锅', '冒菜', '肯德基', '北京烤鸭', '砂锅'],
       prizes: []
     };
   },

@@ -2,8 +2,8 @@
   <div class="lucky-box">
     <LuckyWheel
       ref="LuckyWheel"
-      width="300px"
-      height="300px"
+      :width="width"
+      :height="height"
       :prizes="prizes"
       :default-style="defaultStyle"
       :blocks="blocks"
@@ -21,6 +21,14 @@ import { LuckyWheel } from 'vue-luck-draw';
 export default {
   components: { LuckyWheel },
   props: {
+    width: {
+      type: String,
+      default: '300px'
+    },
+    height: {
+      type: String,
+      default: '300px'
+    },
     prizes: Array
   },
   data() {
@@ -50,9 +58,11 @@ export default {
       }, 3000);
     },
     endCallBack(prize) {
+      const h = this.$createElement;
       this.$notify({
         title: '决定了！',
-        message: `今天就吃${prize.title}！`,
+        // message: `今天就吃${prize.title}！`,
+        message: h('i', { style: 'color: teal' }, `今天就吃${prize.title}！`),
         position: 'top-left'
       });
     }

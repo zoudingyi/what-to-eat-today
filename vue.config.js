@@ -1,3 +1,5 @@
+const defaultSettings = require('./src/settings.js');
+
 module.exports = {
   publicPath:
     process.env.NODE_ENV === 'production' ? '/what-to-eat-today/' : '/',
@@ -12,7 +14,7 @@ module.exports = {
   },
   chainWebpack: config => {
     config.plugin('html').tap(args => {
-      args[0].title = '今天吃啥！';
+      args[0].title = defaultSettings.title;
       return args;
     });
   }

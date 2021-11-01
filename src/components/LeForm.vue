@@ -91,15 +91,20 @@ export default {
 .le-form {
   padding: 10px;
   height: 100%;
+  .box-card {
+    height: 100%;
+  }
   ::v-deep .el-card__body {
+    height: 100%;
     padding: 10px;
+    overflow-y: auto;
   }
   .menu-container {
     display: flex;
     align-content: flex-start;
     justify-content: flex-start;
     flex-wrap: wrap;
-    height: 200px;
+    // height: 200px;
   }
   .el-tag {
     margin: 5px;

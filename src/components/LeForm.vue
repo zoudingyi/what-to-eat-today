@@ -34,15 +34,6 @@
             添加
           </el-button>
         </div>
-        <!-- <div class="form-container">
-          <el-form ref="le-form" :model="form" label-width="80px">
-            <el-form-item label="添加菜品">
-              <el-input v-model="form.model">
-                <el-button slot="append">添加</el-button>
-              </el-input>
-            </el-form-item>
-          </el-form>
-        </div> -->
       </div>
     </el-card>
   </div>

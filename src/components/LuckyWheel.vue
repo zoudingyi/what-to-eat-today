@@ -23,11 +23,11 @@ export default {
   props: {
     width: {
       type: String,
-      default: '300px'
+      default: '400px'
     },
     height: {
       type: String,
-      default: '300px'
+      default: '400px'
     },
     prizes: Array
   },
@@ -52,10 +52,12 @@ export default {
   mounted() {},
   methods: {
     startCallBack() {
-      this.$refs.LuckyWheel.play();
-      setTimeout(() => {
-        this.$refs.LuckyWheel.stop((Math.random() * 8) >> 0);
-      }, 3000);
+      if (this.prizes.length > 0) {
+        this.$refs.LuckyWheel.play();
+        setTimeout(() => {
+          this.$refs.LuckyWheel.stop((Math.random() * 8) >> 0);
+        }, 3000);
+      }
     },
     endCallBack(prize) {
       const h = this.$createElement;

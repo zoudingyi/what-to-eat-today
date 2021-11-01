@@ -1,6 +1,7 @@
 <template>
   <div class="lucky-box">
-    <LuckyGrid
+    敬请期待...
+    <!-- <LuckyGrid
       ref="LuckDraw"
       width="310px"
       height="330px"
@@ -11,15 +12,15 @@
       :active-style="activeStyle"
       @start="startCallBack"
       @end="endCallBack"
-    />
+    /> -->
   </div>
 </template>
 
 <script>
-import { LuckyGrid } from 'vue-luck-draw';
+// import { LuckyGrid } from 'vue-luck-draw';
 
 export default {
-  components: { LuckyGrid },
+  // components: { LuckyGrid },
   props: {
     prizes: Array
   },

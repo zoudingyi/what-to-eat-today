@@ -20,7 +20,7 @@ export default {
     };
   },
   created() {
-    if (this.isPC) {
+    if (this.isPC()) {
       this.currentComponent = 'homePC';
     } else {
       this.currentComponent = 'homeMobile';

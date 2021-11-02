@@ -69,7 +69,8 @@ export default {
     handleInputConfirm() {
       const { inputValue } = this;
       if (inputValue) {
-        this.menuList.push(inputValue);
+        const value = inputValue.substr(0, 10);
+        this.menuList.push(value);
       }
       this.inputVisible = false;
       this.inputValue = '';

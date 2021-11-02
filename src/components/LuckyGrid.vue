@@ -1,6 +1,13 @@
 <template>
   <div class="lucky-box">
-    敬请期待...
+    <h2 style="line-height: 25px">
+      敬请期待...
+      <br />
+      <i style="font-size: 12px; font-weight: normal">
+        虽然我很想这么说但是你最好不要有期待.. 因为我很可能会鸽掉..
+      </i>
+    </h2>
+
     <!-- <LuckyGrid
       ref="LuckDraw"
       width="310px"
